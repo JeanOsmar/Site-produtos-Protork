@@ -1,0 +1,99 @@
+<!DOCTYPE html> <!-- Define que o documento utiliza HTML5 -->
+
+<html lang="pt-BR"> <!-- Define o idioma da página -->
+
+<head> <!-- Início das configurações -->
+
+    <meta charset="UTF-8"> <!-- Permite caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta para celulares -->
+
+    <title>PROTORK | Loja Oficial</title> <!-- Título da página -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head> <!-- Fim das configurações -->
+
+<body> <!-- Início do conteúdo -->
+
+    <header> <!-- Cabeçalho -->
+
+        <div class="logo">PROTORK</div> <!-- Logo da loja -->
+
+        <nav> <!-- Menu de navegação -->
+
+    <a href="#">Início</a>
+
+    <a href="#produtos">Produtos</a>
+
+    <a href="#contato">Contato</a>
+
+    <a href="login.html">Entrar</a>
+
+    <a href="cadastro.html">Cadastrar</a>
+
+    </nav>
+
+        <button class="cart" onclick="toggleCart()"> <!-- Botão do carrinho -->
+
+            🛒 Carrinho (<span id="count">0</span>) <!-- Quantidade de produtos -->
+
+        </button>
+
+    </header>
+
+    <section class="banner"> <!-- Banner principal -->
+
+        <h1>BEM-VINDO À <span>PROTORK</span></h1> <!-- Título -->
+
+        <p>Qualidade, estilo e inovação em um só lugar.</p> <!-- Descrição -->
+
+        <a href="#produtos">CONFERIR PRODUTOS</a> <!-- Botão de acesso -->
+
+    </section>
+
+    <main class="container" id="produtos"> <!-- Área principal -->
+
+        <h2 class="section-title">NOSSOS PRODUTOS</h2> <!-- Título do catálogo -->
+
+        <div class="products" id="product-list"></div> <!-- Produtos carregados pelo JavaScript -->
+
+        <section class="cart-panel" id="cart-panel"> <!-- Carrinho de compras -->
+
+            <h2>Meu carrinho</h2> <!-- Título do carrinho -->
+
+            <div id="cart-items"></div> <!-- Lista de itens -->
+
+            <div class="cart-total">
+
+                Total: R$ <span id="total">0,00</span> <!-- Valor total -->
+
+            </div>
+
+            <button class="checkout" onclick="checkout()"> <!-- Botão de finalizar -->
+
+                FINALIZAR PEDIDO
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer id="contato"> <!-- Rodapé -->
+
+        <h2>PROTOK<span>.</span></h2> <!-- Nome da loja -->
+
+        <p>Obrigado por escolher nossa loja!</p> <!-- Mensagem -->
+
+        <p>Entre em contato conosco.</p> <!-- Contato -->
+
+        <p>© 2026 PROTOK - Todos os direitos reservados.</p> <!-- Direitos autorais -->
+
+    </footer>
+
+    <script src="script.js"></script><!-- Conecta o JavaScript -->
+
+</body>
+
+</html> <!-- Fim do documento -->

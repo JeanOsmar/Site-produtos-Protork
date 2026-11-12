@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | PROTORK</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cadastro-container">
+
+        <h1>PROTORK</h1>
+
+        <h2>Entrar na minha conta</h2>
+
+        <form id="form-login">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+            <button type="submit">ENTRAR</button>
+
+        </form>
+
+        <p>
+            Ainda não tem uma conta?
+            <a href="cadastro.html">Cadastre-se</a>
+        </p>
+
+        <p>
+            <a href="index.html">Voltar para a loja</a>
+        </p>
+
+    </div>
+
+    <script>
+        document.getElementById("form-login").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            alert("Tela de login funcionando! Ainda precisamos conectar ao banco de dados.");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | PROTORK</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .cadastro-container {
+            max-width: 650px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .cadastro-container h1 {
+            text-align: center;
+            color: #111;
+        }
+
+        .cadastro-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .cadastro-container label {
+            font-weight: bold;
+        }
+
+        .cadastro-container button {
+            width: 100%;
+            padding: 14px;
+            background: #2eaa75;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cadastro-container">
+
+        <h1>PROTOK.</h1>
+        <h2>Criar minha conta</h2>
+
+        <form id="formCadastro">
+
+            <label>Nome completo</label>
+            <input type="text" name="nome"
+                   autocomplete="name" required>
+
+            <label>CPF</label>
+            <input type="text" name="cpf"
+                   placeholder="000.000.000-00"
+                   maxlength="14" required>
+
+            <label>E-mail</label>
+            <input type="email" name="email"
+                   autocomplete="email" required>
+
+            <label>Telefone</label>
+            <input type="tel" name="telefone"
+                   autocomplete="tel" required>
+
+            <label>CEP</label>
+            <input type="text" name="cep"
+                   placeholder="00000-000" required>
+
+            <label>Endereço</label>
+            <input type="text" name="endereco"
+                   autocomplete="street-address" required>
+
+            <label>Número</label>
+            <input type="text" name="numero" required>
+
+            <label>Bairro</label>
+            <input type="text" name="bairro" required>
+
+            <label>Cidade</label>
+            <input type="text" name="cidade" required>
+
+            <label>Estado</label>
+            <input type="text" name="estado"
+                   maxlength="2" placeholder="PR" required>
+
+            <label>Senha</label>
+            <input type="password" id="senha"
+                   minlength="8" required>
+
+            <label>Confirmar senha</label>
+            <input type="password" id="confirmarSenha"
+                   minlength="8" required>
+
+            <button type="submit">
+                CRIAR MINHA CONTA
+            </button>
+
+        </form>
+
+        <p style="text-align:center">
+            Já possui conta?
+            <a href="login.html">Faça login</a>
+        </p>
+
+        <p style="text-align:center">
+            <a href="index.html">Voltar para a loja</a>
+        </p>
+
+    </div>
+
+    <script>
+        document.getElementById("formCadastro")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const senha =
+                    document.getElementById("senha").value;
+
+                const confirmar =
+                    document.getElementById("confirmarSenha").value;
+
+                if (senha !== confirmar) {
+                    alert("As senhas não são iguais!");
+                    return;
+                }
+
+                alert("Tela de cadastro funcionando! " +
+                      "Agora precisamos conectar ao PHP e ao banco de dados.");
+            });
+    </script>
+
+</body>
+</html>

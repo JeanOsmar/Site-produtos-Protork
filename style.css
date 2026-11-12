@@ -1,0 +1,355 @@
+
+/* Configura todos os elementos */
+* {
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove espaçamentos */
+    box-sizing: border-box; /* Facilita o dimensionamento */
+    font-family: Arial, sans-serif; /* Define a fonte */
+}
+
+/* Configuração geral */
+body {
+    background: #f5f5f5; /* Fundo cinza */
+    color: #222; /* Texto escuro */
+}
+
+/* Cabeçalho */
+header {
+    background: #111; /* Fundo preto */
+    color: white; /* Texto branco */
+    padding: 22px 7%; /* Espaçamento interno */
+    display: flex; /* Elementos lado a lado */
+    justify-content: space-between; /* Distribuição */
+    align-items: center; /* Alinhamento vertical */
+    flex-wrap: wrap; /* Permite quebrar linha */
+    gap: 15px; /* Espaço entre elementos */
+}
+
+/* Logo */
+.logo {
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    letter-spacing: 3px; /* Espaço entre letras */
+    color: #00d084; /* Verde */
+}
+
+/* Menu */
+nav {
+    display: flex; /* Links lado a lado */
+    gap: 25px; /* Espaço entre links */
+}
+
+/* Links */
+nav a {
+    color: white; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 14px; /* Tamanho */
+}
+
+/* Efeito dos links */
+nav a:hover {
+    color: #00d084; /* Verde ao passar o mouse */
+}
+
+/* Botão carrinho */
+.cart {
+    background: #00d084; /* Fundo verde */
+    color: #111; /* Texto preto */
+    padding: 12px 18px; /* Espaçamento */
+    border-radius: 5px; /* Cantos arredondados */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Cursor de clique */
+    border: none; /* Remove borda */
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(120deg, #101010, #263c35); /* Degradê */
+    color: white; /* Texto branco */
+    min-height: 370px; /* Altura mínima */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Texto centralizado */
+    padding: 30px; /* Espaçamento */
+}
+
+/* Título do banner */
+.banner h1 {
+    font-size: 52px; /* Tamanho */
+    margin-bottom: 15px; /* Margem inferior */
+}
+
+/* Palavra PROTOK no banner */
+.banner h1 span {
+    color: #00d084; /* Verde */
+}
+
+/* Texto do banner */
+.banner p {
+    font-size: 18px; /* Tamanho */
+    margin-bottom: 25px; /* Espaço inferior */
+}
+
+/* Botão do banner */
+.banner a {
+    background: #00d084; /* Fundo verde */
+    color: #111; /* Texto preto */
+    padding: 15px 30px; /* Espaçamento */
+    text-decoration: none; /* Sem sublinhado */
+    font-weight: bold; /* Negrito */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+/* Área principal */
+.container {
+    max-width: 1200px; /* Largura máxima */
+    margin: 50px auto; /* Centraliza */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+/* Título da seção */
+.section-title {
+    text-align: center; /* Centraliza */
+    font-size: 30px; /* Tamanho */
+    margin-bottom: 35px; /* Espaço inferior */
+}
+
+/* Grade de produtos */
+.products {
+    display: grid; /* Ativa grade */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas responsivas */
+    gap: 25px; /* Espaçamento */
+}
+
+/* Cartão de produto */
+.product {
+    background: white; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    overflow: hidden; /* Esconde excesso */
+    box-shadow: 0 3px 12px #00000012; /* Sombra */
+    transition: .3s; /* Animação */
+}
+
+/* Efeito do produto */
+.product:hover {
+    transform: translateY(-5px); /* Levanta o cartão */
+}
+
+/* Imagem do produto */
+.product img {
+    width: 100%; /* Largura total */
+    height: 230px; /* Altura */
+    object-fit: cover; /* Ajusta imagem */
+    background: #ddd; /* Fundo cinza */
+}
+
+/* Informações do produto */
+.product-info {
+    padding: 18px; /* Espaçamento interno */
+}
+
+/* Nome do produto */
+.product-info h3 {
+    margin-bottom: 10px; /* Espaço inferior */
+}
+
+/* Preço */
+.price {
+    color: #009966; /* Verde */
+    font-size: 22px; /* Tamanho */
+    font-weight: bold; /* Negrito */
+    margin: 12px 0; /* Margem */
+}
+
+/* Botão de compra */
+.product button {
+    width: 100%; /* Largura total */
+    padding: 13px; /* Espaçamento */
+    background: #111; /* Preto */
+    color: white; /* Branco */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Arredondamento */
+    cursor: pointer; /* Clique */
+    font-weight: bold; /* Negrito */
+}
+
+/* Efeito do botão */
+.product button:hover {
+    background: #00a96c; /* Verde */
+}
+
+/* Painel do carrinho */
+.cart-panel {
+    background: white; /* Fundo branco */
+    padding: 25px; /* Espaçamento */
+    border-radius: 10px; /* Cantos arredondados */
+    margin-top: 35px; /* Margem superior */
+    display: none; /* Começa escondido */
+}
+
+/* Título do carrinho */
+.cart-panel h2 {
+    margin-bottom: 15px; /* Espaço inferior */
+}
+
+/* Itens do carrinho */
+.cart-item {
+    padding: 12px 0; /* Espaçamento vertical */
+    border-bottom: 1px solid #ddd; /* Linha divisória */
+}
+
+/* Total */
+.cart-total {
+    font-size: 22px; /* Tamanho */
+    font-weight: bold; /* Negrito */
+    margin: 20px 0; /* Margem */
+}
+
+/* Botão finalizar */
+.checkout {
+    background: #00a96c; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 15px; /* Espaçamento */
+    width: 100%; /* Largura total */
+    border-radius: 5px; /* Arredondamento */
+    cursor: pointer; /* Clique */
+    font-size: 16px; /* Tamanho */
+}
+
+/* Rodapé */
+footer {
+    background: #111; /* Preto */
+    color: white; /* Branco */
+    text-align: center; /* Centralizado */
+    padding: 35px 15px; /* Espaçamento */
+    margin-top: 60px; /* Margem superior */
+}
+
+/* Destaque do rodapé */
+footer span {
+    color: #00d084; /* Verde */
+}
+
+/* Configurações para celular */
+@media (max-width: 600px) {
+
+    header {
+        justify-content: center; /* Centraliza cabeçalho */
+    }
+
+    nav {
+        width: 100%; /* Ocupa a largura */
+        justify-content: center; /* Centraliza menu */
+    }
+
+    .banner h1 {
+        font-size: 36px; /* Reduz título */
+    }
+}
+
+/* =================================
+   ESTILO DA PÁGINA DE CADASTRO
+================================= */
+
+body:has(.cadastro-container) {
+    background: #151918;
+    min-height: 100vh;
+    padding: 35px 15px;
+}
+
+.cadastro-container {
+    max-width: 680px;
+    margin: 20px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.cadastro-container h1 {
+    text-align: center;
+    color: #00a96c;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.cadastro-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cadastro-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-container label {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.cadastro-container input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.cadastro-container input:focus {
+    outline: none;
+    border-color: #00a96c;
+    box-shadow: 0 0 0 3px rgba(0,169,108,0.15);
+}
+
+.cadastro-container button {
+    padding: 16px;
+    margin-top: 30px;
+    background: #00a96c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cadastro-container button:hover {
+    background: #008653;
+}
+
+.cadastro-container p {
+    margin-top: 20px;
+}
+
+.cadastro-container a {
+    color: #008653;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .cadastro-container {
+        padding: 25px 18px;
+    }
+}
+/* Forçar a exibição do cabeçalho da loja */
+body > header {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    width: 100%;
+    background: #111;
+    color: white;
+    padding: 22px 7%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    z-index: 100;
+}
